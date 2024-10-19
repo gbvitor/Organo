@@ -192,8 +192,7 @@ function App() {
 
     const [colaboradores, setColaboradores] = useState(inicial);
     function deletarColaborador(colaborador) {
-        setColaboradores(colaboradores.filter((c) => c !== colaborador));
-        alert(`Colaborador ${colaborador.nome} excluído.`);
+        alert("Deleting " + colaborador);
     }
 
     return (
@@ -214,7 +213,7 @@ function App() {
                         colaboradores={colaboradores.filter(
                             (colaborador) => colaborador.time === time.nome
                         )}
-                        deletarColaborador={deletarColaborador}
+                        aoDeletar={deletarColaborador}
                     />
                 ))}
             </section>
